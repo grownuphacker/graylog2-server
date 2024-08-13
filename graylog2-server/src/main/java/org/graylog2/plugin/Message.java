@@ -216,7 +216,7 @@ public class Message implements Messages, Indexable, Acknowledgeable {
     public static final String FIELD_GL2_SOURCE_RADIO_INPUT = "gl2_source_radio_input";
 
     // Matches whole field names containing a-z, A-Z, 0-9, period char, -, or @.
-    private static final Pattern VALID_KEY_PATTERN = Pattern.compile("^[^\\s][\\w\\.\\-@/\\s]*[^\\s]$");
+    private static final Pattern VALID_KEY_PATTERN = Pattern.compile("^[\\w\\.\\-@/\\s]*$");
     // Same as above, but matches only the invalid (non-indicated) characters.
     // [^ ... ] around the pattern inverts the match.
     private static final Pattern INVALID_KEY_CHARS = Pattern.compile("[^\\w\\.\\-@/\\s]");
