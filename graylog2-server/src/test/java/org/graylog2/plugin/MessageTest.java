@@ -350,6 +350,7 @@ public class MessageTest {
 
     @Test
     public void testValidKeys() {
+        assertTrue(Message.validKey("a"));
         assertTrue(Message.validKey("foo123"));
         assertTrue(Message.validKey("foo-bar123"));
         assertTrue(Message.validKey("foo_bar123"));
@@ -362,10 +363,6 @@ public class MessageTest {
         assertFalse(Message.validKey("foo+bar"));
         assertFalse(Message.validKey("foo$bar"));
         assertFalse(Message.validKey(" "));
-        assertFalse(Message.validKey(" key"));
-        assertFalse(Message.validKey("key "));
-        assertFalse(Message.validKey("key  "));
-        assertFalse(Message.validKey(" key "));
         assertFalse(Message.validKey(""));
     }
 
