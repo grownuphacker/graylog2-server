@@ -652,7 +652,7 @@ public class Message implements Messages, Indexable, Acknowledgeable {
     }
 
     public static boolean validKey(final String key) {
-        return VALID_KEY_PATTERN.matcher(key).matches();
+        return VALID_KEY_PATTERN.matcher(key).matches() && !key.isBlank();
     }
 
     public static String cleanKey(final String key) {
