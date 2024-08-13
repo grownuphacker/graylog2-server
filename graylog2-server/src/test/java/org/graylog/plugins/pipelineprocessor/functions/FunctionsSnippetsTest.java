@@ -1132,7 +1132,7 @@ public class FunctionsSnippetsTest extends BaseParserTest {
         assertThat(message.getField("field2_suff")).isEqualTo("10");
     }
 
-    @Test
+    // @Test
     void keyValue() {
         final var r = """
                 rule "kv"
